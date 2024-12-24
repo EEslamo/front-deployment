@@ -37,7 +37,7 @@ function Registration() {
       } else if (formData.email.endsWith('@courier.com')) {
         endpoint = 'http://localhost:3000/create-courier';
       } else {
-        endpoint = 'http://localhost:3000/users';
+        endpoint = 'https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/users';
       }
 
       const response = await fetch(endpoint, {

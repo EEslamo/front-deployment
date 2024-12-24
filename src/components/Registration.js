@@ -63,7 +63,7 @@ function Registration() {
 
   const testConnection = async () => {
     try {
-      const response = await fetch('http://localhost:3000/');
+      const response = await fetch('https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/');
       if (response.ok) {
         console.log('Backend connection is successful');
       } else {

@@ -14,7 +14,7 @@ function UserOrders() {
     } else {
       const fetchUserOrders = async () => {
         try {
-          const response = await fetch(`http://localhost:3000/user-orders/${userId}`);
+          const response = await fetch(`https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/user-orders/${userId}`);
           if (response.ok) {
             const data = await response.json();
             setOrders(data);
@@ -32,7 +32,7 @@ function UserOrders() {
   const cancelOrder = async (orderId) => {
     if (window.confirm('Are you sure you want to cancel this order?')) {
       try {
-        const response = await fetch(`http://localhost:3000/orders/${orderId}`, {
+        const response = await fetch(`https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/orders/${orderId}`, {
           method: 'DELETE',
         });
         if (response.ok) {

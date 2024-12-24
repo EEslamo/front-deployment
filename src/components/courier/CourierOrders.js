@@ -24,7 +24,7 @@ function CourierOrders() {
 
   const validateCourier = async (email) => {
     try {
-      const response = await fetch('http://localhost:3000/validate-courier', {
+      const response = await fetch('https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/validate-courier', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ function CourierOrders() {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch('http://localhost:3000/orders/pending');
+      const response = await fetch('https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/orders/pending');
       if (response.ok) {
         const data = await response.json();
         setOrders(data);
@@ -70,7 +70,7 @@ function CourierOrders() {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/orders/${orderId}/accept`, {
+      const response = await fetch(`https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/orders/${orderId}/accept`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -21,7 +21,7 @@ function OrderManagement() {
   // Validate if the email exists in the admins table
   const validateAdmin = async (email) => {
     try {
-      const response = await fetch('http://localhost:3000/validate-admin', {
+      const response = await fetch('https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/validate-admin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ function OrderManagement() {
   // Fetch all orders from the backend
   const fetchOrders = async () => {
     try {
-      const response = await fetch('http://localhost:3000/orders');
+      const response = await fetch('https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/orders');
       if (response.ok) {
         const data = await response.json();
         setOrders(data);
@@ -64,7 +64,7 @@ function OrderManagement() {
   // Update order status to "Picked Up"
   const updateOrderStatus = async (orderId) => {
     try {
-      const response = await fetch(`http://localhost:3000/orders/${orderId}/pickup`, {
+      const response = await fetch(`https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/orders/${orderId}/pickup`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
       });
@@ -84,7 +84,7 @@ function OrderManagement() {
   // Delete an order
   const deleteOrder = async (orderId) => {
     try {
-      const response = await fetch(`http://localhost:3000/orders/${orderId}`, {
+      const response = await fetch(`https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/orders/${orderId}`, {
         method: 'DELETE',
       });
 

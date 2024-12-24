@@ -10,7 +10,7 @@ function Login() {
   const handleSubmit = async (e, isAdmin = false) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch('https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

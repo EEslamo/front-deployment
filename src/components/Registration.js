@@ -33,9 +33,9 @@ function Registration() {
       // Determine the endpoint based on the email domain
       let endpoint;
       if (formData.email.endsWith('@admin.com')) {
-        endpoint = 'http://localhost:3000/create-admin';
+        endpoint = 'https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/create-admin';
       } else if (formData.email.endsWith('@courier.com')) {
-        endpoint = 'http://localhost:3000/create-courier';
+        endpoint = 'https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/create-courier';
       } else {
         endpoint = 'https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/users';
       }

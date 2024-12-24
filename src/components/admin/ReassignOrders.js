@@ -25,7 +25,7 @@ function AdminOrders() {
 
   const validateAdmin = async (email) => {
     try {
-      const response = await fetch('http://localhost:3000/validate-admin', {
+      const response = await fetch('https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/validate-admin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ function AdminOrders() {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch('http://localhost:3000/ordersWithCouriers');
+      const response = await fetch('https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/ordersWithCouriers');
       if (response.ok) {
         const data = await response.json();
         setOrders(data);
@@ -64,7 +64,7 @@ function AdminOrders() {
 
   const fetchCouriers = async () => {
     try {
-      const response = await fetch('http://localhost:3000/couriers');
+      const response = await fetch('https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/couriers');
       if (response.ok) {
         const data = await response.json();
         setCouriers(data);
@@ -83,7 +83,7 @@ function AdminOrders() {
 
   const reassignCourier = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/orders/${selectedOrderId}/accept`, {
+      const response = await fetch(`https://tools-3-backend-git-youssefhatem03-dev.apps.rm2.thpm.p1.openshiftapps.com/orders/${selectedOrderId}/accept`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
